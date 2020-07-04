@@ -56,7 +56,6 @@ function myFunction() {
 	document.getElementById('myDropdown').classList.toggle('show');
 }
 
-// Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
 	if (!event.target.matches('.dropbtn')) {
 		var dropdowns = document.getElementsByClassName('dropdown-content');
@@ -69,3 +68,23 @@ window.onclick = function (event) {
 		}
 	}
 };
+
+let sidebarOpener = document.querySelector('.mobile_only_logo');
+sidebarOpener.addEventListener('click', () => {
+	let sidebar = document.querySelector('.mobile_sidebar');
+	sidebar.style.display = 'block';
+	let closeSidebar = document.querySelector('.profile_and_close_icon');
+	closeSidebar.addEventListener('click', () => {
+		sidebar.style.display = 'none';
+	});
+});
+
+let messageSidebarOpener = document.querySelector('.mobile_only_section');
+messageSidebarOpener.addEventListener('click', () => {
+	let sidebar = document.querySelector('.comments_sidebar');
+	sidebar.style.display = 'block';
+	let closeSidebar = document.querySelector('.back_arrow');
+	closeSidebar.addEventListener('click', () => {
+		sidebar.style.display = 'none';
+	});
+});

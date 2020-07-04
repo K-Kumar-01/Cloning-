@@ -60,7 +60,12 @@ body {
 	background-color: var(--darkGrey);
 }
 .nav_input:focus {
-	border: none;
+	outline: none;
+}
+
+.mobile_only_section,
+.mobile_only_logo {
+	display: none;
 }
 .icon_section {
 	text-align: center;
@@ -218,6 +223,29 @@ body {
 	.premium {
 		padding-left: 0.2rem;
 		width: 80px;
+	}
+	.navbar__container {
+		width: 93%;
+	}
+}
+
+@media (max-width: 576px) {
+	.desktop_only_section {
+		display: none;
+	}
+	.nav_input {
+		width: 70vw;
+	}
+	.mobile_only_section {
+		display: inline;
+		cursor: pointer;
+	}
+	.mobile_only_logo {
+		display: block;
+		cursor: pointer;
+	}
+	.desktop_only_logo {
+		display: none;
 	}
 }
 
@@ -395,9 +423,89 @@ main {
 	background-color: var(--mainWhite);
 }
 
+@media (max-width: 700px) {
+	.work_close {
+		width: 40vw;
+	}
+}
+
 .close_icon {
 	text-align: right;
 	cursor: pointer;
 	font-size: 1.2rem;
 	padding: 1rem;
+}
+
+.mobile_sidebar {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+}
+
+@media (max-width: 576px) {
+	.sidebar_layer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: var(--mainWhite);
+		width: 50vw;
+		height: 100vh;
+		z-index: 100;
+	}
+	.profile_and_close {
+		display: flex;
+		padding: 0.5rem;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.profile_and_close_image {
+		height: 4rem;
+		width: 4rem;
+		border-radius: 50%;
+		border: 1px solid var(--mainGrey);
+	}
+	.profile_and_close_link {
+		color: #0092be;
+		text-decoration: none;
+	}
+}
+
+.comments_sidebar {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+	transition: all 0.5s linear;
+}
+@media (max-width: 576px) {
+	.comments_sidebar_layer {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: var(--mainWhite);
+		width: 100vw;
+		height: 100vh;
+		z-index: 100;
+	}
+	.comment_sidebar_header {
+		display: flex;
+		padding: 0.5rem;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #1485bd;
+		color: white;
+		font-weight: bold;
+	}
+	.back_arrow{
+		cursor: pointer;
+	}
 }

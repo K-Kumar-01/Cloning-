@@ -15,15 +15,21 @@
         <!-- Navbar component -->
         <nav class="navbar__container">
             <div class="navbar">
-                <div class="nav_section">
+                <div class="nav_section changable_section">
                     <a href="/" class="nav_element">
-                        <img src="images/title logo.png" alt="logo" class="main_logo">
+                        <img src="images/title logo.png" alt="logo" class="main_logo desktop_only_logo">
+                    </a>
+                    <a class="mobile_only_logo">
+                        <img src="images/avatar.jpg" alt="avatar" class="nav_avatar_image">
                     </a>
                     <span class="nav_element">
                         <input type="text" placeholder="Search" class="nav_input">
                     </span>
+                    <div class="mobile_only_section">
+                        <i class="fas fa-comments nav_icon"></i>
+                    </div>
                 </div>
-                <div class="nav_section">
+                <div class="nav_section desktop_only_section">
                     <div class="icon_section_active icon_navigations">
                         <span>
                             <i class="fas fa-home nav_icon"></i>
@@ -301,6 +307,41 @@
             </div>
         </section>
     </main>
+
+    <div class="mobile_sidebar">
+        <div class="sidebar_layer">
+            <div class="profile_and_close">
+                <img src="images/avatar.jpg" alt="avatar" class="profile_and_close_image">
+                <div style="text-align: center;">
+                    <p><b>Your Name</b></p>
+                    <a class="profile_and_close_link" href="">View Profile</a> •
+                    <a class="profile_and_close_link" href="">Settings</a>
+                </div>
+                <div class="profile_and_close_icon">
+                    <i class="fas fa-times" style="cursor: pointer;"></i>
+                </div>
+            </div>
+            <div>
+                Just created a sample sidebar
+            </div>
+        </div>
+    </div>
+
+    <div class="comments_sidebar">
+        <div class="comments_sidebar_layer">
+            <div class="comment_sidebar_header">
+                <div class="back_arrow">
+                    <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div>
+                    Messages
+                </div>
+            </div>
+            <div>
+                Just created a sample sidebar
+            </div>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 
