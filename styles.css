@@ -342,6 +342,9 @@ main {
 	text-indent: 0.5rem;
 	padding-bottom: 0.5rem;
 }
+.post_realation {
+	text-align: left;
+}
 
 .reaction_like {
 	color: black;
@@ -519,5 +522,18 @@ main {
 	}
 	.back_arrow {
 		cursor: pointer;
+	}
+}
+
+.mobile_only {
+	display: none;
+}
+
+@media (max-width: 576px) {
+	.mobile_only {
+		display: block;
+	}
+	.desktop_only {
+		display: none;
 	}
 }
